@@ -62,7 +62,7 @@
   <a href="https://soundcloud.com/zryj-pale">SoundCloud</a>
   <a href="https://goreflix.com">GoreFlix</a>
 
-  <img src="kfc.jpg" alt="KFC=ILLUMINATI" style="display: block; margin: 0 auto; width: 75%;">
+  <img id="randomImage" src="kfc.jpg" alt="KFC=ILLUMINATI" style="display: block; margin: 0 auto; width: 75%;">
 
   <!-- Sekcja z informacjami kontaktowymi -->
   <div class="contact-info">
@@ -71,26 +71,32 @@
 
   <!-- Dodanie odtwarzacza audio -->
   <audio autoplay loop>
-    <source src="bruno.wav" type="audio/wav">
+    <source src="scary_sound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
   </audio>
 
-  <!-- Skrypt JavaScript do obsługi pojawiania się/znikania sekcji kontaktowej -->
-  <script>
-    window.addEventListener('scroll', function() {
-      var contactInfo = document.querySelector('.contact-info');
-      if (window.scrollY > 100) { /* Po przewinięciu 100px w dół */
-        contactInfo.style.bottom = '0';
-      } else {
-        contactInfo.style.bottom = '-200px';
-      }
-    });
-  </script>
+  <!-- Przycisk do wyświetlania losowego obrazu -->
+  <button onclick="showRandomImage()">Losowy obraz</button>
 
   <form action="adres_twojego_serwera_do_przetwarzania_danych" method="post">
     <label for="email">Zapisz się na nasz newsletter:</label>
     <input type="email" id="email" name="email" placeholder="Twój adres email" required>
     <input type="submit" value="Zapisz się">
   </form>
+
+  <script>
+    // Tablica obrazów
+    var images = [
+      'kfc.jpg'
+    ];
+
+    // Funkcja wyświetlająca losowy obraz
+    function showRandomImage() {
+      var randomIndex = Math.floor(Math.random() * images.length);
+      var randomImage = images[randomIndex];
+      document.getElementById('randomImage').src = randomImage;
+    }
+  </script>
 
 </body>
 </html>
