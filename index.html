@@ -2,32 +2,52 @@
 <html>
 <head>
   <style>
+    /* Style dla sekcji kontaktowej */
+    .contact-info {
+      position: fixed;
+      bottom: -200px; /* Ukrycie początkowe za dolnym brzegiem */
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: bottom 0.3s ease; /* Animacja pojawiania się/znikania */
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
     body {
       background-image: url("marshal-laptop.jpg");
+      margin-bottom: 300px; /* Zapewnienie miejsca dla ukrytej sekcji kontaktowej */
     }
+
     h1 {
       color: white;
       text-align: center;
     }
+
     p {
       font-family: verdana;
       font-size: 24px;
       text-align: center;
       color: black;
     }
+
     img {
       display: block;
       margin: 0 auto; 
       width: 75%;
     }
+
     a {
       display: block;
       text-align: center;
-      font-size: 75%; 
+      font-size: 50%; /* Zmiana wielkości linków na 50% */
       color: blue;
       margin: 10px auto;
-      text-decoration: none; 
+      text-decoration: none;
+      width: 50%; /* Ustawienie szerokości linków na 50% */
     }
+
     a:hover {
       color: navy;
     }
@@ -44,6 +64,22 @@
 
   <img src="kfc.jpg" alt="KFC=ILLUMINATI" style="display: block; margin: 0 auto; width: 75%;">
 
+  <!-- Sekcja z informacjami kontaktowymi -->
+  <div class="contact-info">
+    <p>Kontakt: kontakt@example.com | Telefon: 123-456-789</p>
+  </div>
+
+  <!-- Skrypt JavaScript do obsługi pojawiania się/znikania sekcji kontaktowej -->
+  <script>
+    window.addEventListener('scroll', function() {
+      var contactInfo = document.querySelector('.contact-info');
+      if (window.scrollY > 100) { /* Po przewinięciu 100px w dół */
+        contactInfo.style.bottom = '0';
+      } else {
+        contactInfo.style.bottom = '-200px';
+      }
+    });
+  </script>
+
 </body>
 </html>
-
