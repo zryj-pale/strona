@@ -2,22 +2,39 @@
 <html>
 <head>
   <style>
-    /* Style dla sekcji kontaktowej */
     .contact-info {
       position: fixed;
-      bottom: -200px; /* Ukrycie początkowe za dolnym brzegiem */
+      bottom: -200px;
       left: 0;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.8);
-      transition: bottom 0.3s ease; /* Animacja pojawiania się/znikania */
+      transition: bottom 0.3s ease;
       padding: 20px;
       text-align: center;
       color: white;
     }
+    .centered-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 200px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .centered-button:hover {
+      background-color: #2980b9;
+    }
 
     body {
       background-image: url("marshal-laptop.jpg");
-      margin-bottom: 300px; /* Zapewnienie miejsca dla ukrytej sekcji kontaktowej */
+      margin-bottom: 300px;
     }
 
     h1 {
@@ -41,11 +58,11 @@
     a {
       display: block;
       text-align: center;
-      font-size: 250%; /* Zmiana wielkości linków na 50% */
+      font-size: 250%;
       color: blue;
       margin: 10px auto;
       text-decoration: none;
-      width: 50%; /* Ustawienie szerokości linków na 50% */
+      width: 50%;
     }
 
     a:hover {
@@ -64,39 +81,26 @@
 
   <img id="randomImage" src="kfc.jpg" alt="KFC=ILLUMINATI" style="display: block; margin: 0 auto; width: 75%;">
 
-  <!-- Sekcja z informacjami kontaktowymi -->
   <div class="contact-info">
     <p>Kontakt: kontakt@zryjpale.pl | Telefon: 535 954 359 | Adres: Pasieka 16/1</p>
   </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      var contactInfo = document.querySelector('.contact-info');
+      if (window.scrollY > 100) {
+        contactInfo.style.bottom = '0';
+      } else {
+        contactInfo.style.bottom = '-200px';
+      }
+    });
+  </script>
 
-  <!-- Dodanie odtwarzacza audio -->
   <audio autoplay loop>
     <source src="scary_sound.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <!-- Przycisk do wyświetlania losowego obrazu -->
-  <button onclick="showRandomImage()">Losowy obraz</button>
-
-  <form action="adres_twojego_serwera_do_przetwarzania_danych" method="post">
-    <label for="email">Zapisz się na nasz newsletter:</label>
-    <input type="email" id="email" name="email" placeholder="Twój adres email" required>
-    <input type="submit" value="Zapisz się">
-  </form>
-
-  <script>
-    // Tablica obrazów
-    var images = [
-      'kfc.jpg'
-    ];
-
-    // Funkcja wyświetlająca losowy obraz
-    function showRandomImage() {
-      var randomIndex = Math.floor(Math.random() * images.length);
-      var randomImage = images[randomIndex];
-      document.getElementById('randomImage').src = randomImage;
-    }
-  </script>
+  <a href="MARSHAL/index.html" class="centered-button">ZDJĘCIA ZRYJ PALE </a>
 
 </body>
 </html>
