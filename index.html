@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .contact-info {
+      position: fixed;
+      bottom: -200px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: bottom 0.3s ease;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .centered-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 200px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 20px auto;
+    }
+
+    .centered-button:hover {
+      background-color: #2980b9;
+    }
+
+    body {
+      background-image: url("marshal-laptop-up.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 300px;
+      height: 2000px; /* Ensure enough scroll space */
+      background-position: center;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 500%;
+      margin-top: 100px;
+    }
+
+    p {
+      font-family: verdana;
+      font-size: 24px;
+      text-align: center;
+      color: white;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto; 
+      width: 75%;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      font-size: 250%;
+      color: blue;
+      margin: 10px auto;
+      text-decoration: none;
+      width: 50%;
+    }
+
+    a:hover {
+      color: navy;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>zryj pale</h1>
+
+  <p>ZRYJ PALE EP OUT SOON</p>
+  
+  <a href="https://soundcloud.com/zryjpale">SoundCloud</a>
+  <a href="https://x.com/zryj_pale">X</a>
+  <a href="https://www.youtube.com/@zryjpale">Youtube</a>
+  <a href="https://freesound.org/people/zryjpale/">Freesound</a>
+  <a href="https://www.kurnik.pl/stat.phtml?u=zryjpale">Kurnik</a>
+  <a href="https://www.reddit.com/user/zryjpale/">Reddit</a>
+  <a href="https://www.instagram.com/zryjpale/">Instagram</a>
+  
+  <img src="gif.gif" alt="gif" style="display: block; margin: 0 auto; width: 25%;">
+
+  <div class="contact-info">
+    <p>Kontakt: kontakt@zryjpale.pl</p>
+  </div>
+  
+  <script>
+    // Parallax effect for the background
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      document.body.style.backgroundPositionY = -(scrollPosition * 0.5) + 'px';
+
+      // Slide up the contact-info div when scrolling past 100px
+      var contactInfo = document.querySelector('.contact-info');
+      if (scrollPosition > 100) {
+        contactInfo.style.bottom = '0';
+      } else {
+        contactInfo.style.bottom = '-200px';
+      }
+    });
+  </script>
+
+  <audio autoplay loop>
+    <source src="bruno.wav" type="audio/wav">
+  </audio>
+
+  <a href="MARSHAL/index.html" class="centered-button">ZDJĘCIA ZRYJ PALE </a>
+  <a href="sklep/index.html" class="centered-button">SKLEP ZRYJ PALE </a>
+
+</body>
+</html>
