@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>sklep zryj pale</title>
+    <style>
+        body
+        {
+            background-image: url(sklep\ tło.gif);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .box
+        {
+            width: 50%;
+            border-radius: 15px;
+            border: 15px solid skyblue;
+            padding: 0px;
+            margin: 50px;
+            color: white;
+            text-align: center;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            font-size: 500%;
+            margin:auto;
+            min-width: fit-content;
+        }
+        .zdjecie 
+        {
+            height: 1000px;
+            border-radius: 7px;
+        }
+        .stara-cena
+        {
+            font-size: 50%;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: gainsboro;
+            opacity: 50%;
+        }
+        .tytul
+        {
+        animation: color-change 10s infinite;
+        }
+        @keyframes color-change {
+            0% {color:aqua;}
+            33% {color:aquamarine;}
+            66% {color:cyan}
+            100% {color:aqua;}
+        }
+        .przycisk-kup
+        {
+            font-size: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img class="zdjecie" src="kotek.jpg" alt="sen">
+        <br>
+        <div class="tytul">
+            <b>interpretacja snów</b>
+        </div>
+
+        <div class="cena">
+            <div class="stara-cena">
+                <s>&ensp;89,99 zł&ensp;</s>
+            </div>
+            <div class="nowa-cena">
+                9,99 zł         
+            </div>
+            <button class="przycisk-kup" type="button">KUP</button> 
+        </div>
+    </div>
+</body>
+</html>
