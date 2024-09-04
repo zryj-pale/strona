@@ -37,13 +37,23 @@
         }
         .tytul
         {
-        animation: color-change 10s infinite;
+        animation: color-change-kotek 10s infinite;
         }
-        @keyframes color-change {
+        @keyframes color-change-kotek {
             0% {color:aqua;}
             33% {color:aquamarine;}
             66% {color:cyan}
             100% {color:aqua;}
+        }
+		.tytul-koszulka
+        {
+        animation: color-change-koszulka 10s infinite;
+        }
+        @keyframes color-change-koszulka {
+            0% {color: yellow;}
+            33% {color: black;}
+            66% {color: gray}
+            100% {color: yellow;}
         }
         .przycisk-kup
         {
@@ -69,5 +79,21 @@
             <button class="przycisk-kup" type="button">KUP</button> 
         </div>
     </div>
+	<div class="box">
+		<img class="zdjecie" src="koszulka.png" alt="koszulka">
+		<br>
+        <div class="tytul-koszulka">
+            <b>koszulka</b>
+        </div>
+		<div class="cena">
+            <div class="stara-cena">
+                <s>&ensp;89,99 zł&ensp;</s>
+            </div>
+            <div class="nowa-cena">
+                39,99 zł         
+            </div>
+            <button class="przycisk-kup" type="button">KUP</button> 
+        </div>
+	</div>
 </body>
 </html>
