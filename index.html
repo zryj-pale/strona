@@ -38,6 +38,7 @@
     }
 
     body {
+      background-color: black;
       background-image: url("marshal-laptop-up.png");
       background-repeat: no-repeat;
       background-size: cover;
@@ -96,6 +97,7 @@
   <a href="https://www.tiktok.com/@zryjpale">TikTok</a>
   
   <img src="gif.gif" alt="gif" style="display: block; margin: 0 auto; width: 25%;">
+  <img src="gif2.gif" alt="gif" style="display: block; margin: 0 auto; width: 25%;">
 
   <div class="contact-info">
     <p>Kontakt: zryjpale@gmail.com</p>
@@ -105,7 +107,7 @@
     // Parallax effect for the background
     window.addEventListener('scroll', function() {
       var scrollPosition = window.scrollY;
-      document.body.style.backgroundPositionY = -(scrollPosition * 0.5) + 'px';
+      document.body.style.backgroundPositionY = -(scrollPosition * 0.1) + 'px';
 
       // Slide up the contact-info div when scrolling past 100px
       var contactInfo = document.querySelector('.contact-info');
